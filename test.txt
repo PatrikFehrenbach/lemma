@@ -1,0 +1,77 @@
+def test_patterns():
+    aws_key = "AKIAIOSFODNN7EXAMPLE"
+    
+    aws_secret = "wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY"
+    
+    github_tokens = [
+        "ghp_aBcDeFgHiJkLmNoPqRsTuVwXyZ0123456789",
+        "ghu_TestTokenAAAABBBBCCCCDDDDEEEEFFFGG",
+        "ghs_ExampleTokenNeverUseThisInRealLife12"
+    ]
+    
+    api_keys = [
+        'api_key="abcdef1234567890abcdef1234567890"',
+        'api_key = "11111222223333344444555556666677"',
+        "API_KEY='TESTKEYTESTKEYTESTKEYTESTKEYTESTKEY'"
+    ]
+    
+    secrets = [
+        'secret="abcdef1234567890abcdef1234567890"',
+        'SECRET = "11111222223333344444555556666677"',
+        "secret='TESTSECRETTESTSECRETTESTSECRETTEST'"
+    ]
+    
+    private_keys = [
+        """-----BEGIN RSA PRIVATE KEY-----
+        TEST_KEY_CONTENT_EXAMPLE_ONLY
+        NEVER_PUT_REAL_KEYS_HERE_THIS_IS_BAD
+        -----END RSA PRIVATE KEY-----""",
+        
+        """-----BEGIN PRIVATE KEY-----
+        EXAMPLE_PRIVATE_KEY_CONTENT_NOT_REAL
+        THIS_IS_JUST_A_TEST_PATTERN_STRING
+        -----END PRIVATE KEY-----"""
+    ]
+    
+    ssh_keys = [
+        """-----BEGIN OPENSSH PRIVATE KEY-----
+        b3BlbnNzaC1rZXktdjEAAAAABG5vbmUAAAAEbm9uZQAAAAAAAAABAAABFw
+        EXAMPLE_CONTENT_NOT_A_REAL_KEY_TESTING_ONLY
+        -----END OPENSSH PRIVATE KEY-----"""
+    ]
+    
+    urls_with_credentials = [
+        "https://username:password123@example.com",
+        "ftp://user:secretpass@ftp.example.com",
+        "postgresql://dbuser:dbpass@database.example.com:5432/db"
+    ]
+
+    config = {
+        "aws": {
+            "key": "AKIAIOSFODNN7EXAMPLE",
+            "secret": "wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY"
+        },
+        "github": {
+            "token": "ghp_aBcDeFgHiJkLmNoPqRsTuVwXyZ0123456789"
+        },
+        "api_keys": {
+            "service1": "api_key_11111222223333344444555556666677",
+            "service2": "secret_key_abcdef1234567890abcdef1234567890"
+        }
+    }
+
+    connection_strings = [
+        "Server=server.example.com;Database=testdb;User Id=admin;Password=password123;",
+        "mongodb+srv://username:password123@cluster0.example.mongodb.net/test",
+        "redis://user:password123@redis.example.com:6379"
+    ]
+
+    return "Test patterns defined"
+
+"""
+Configuration:
+AWS_ACCESS_KEY_ID=AKIAIOSFODNN7EXAMPLE
+AWS_SECRET_ACCESS_KEY=wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY
+GITHUB_TOKEN=ghp_aBcDeFgHiJkLmNoPqRsTuVwXyZ0123456789
+API_KEY=abcdef1234567890abcdef1234567890
+"""
